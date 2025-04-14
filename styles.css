@@ -8,6 +8,7 @@ body {
   overflow-x: hidden; /* Para evitar que se desborde el contenido en pantallas pequeñas */
 }
 
+/* Aquí estamos asegurando que, por defecto, se muestre el fondo claro en el modo normal */
 header, main {
   width: 100%;
   max-width: 1200px; /* Limitar el ancho máximo */
@@ -55,6 +56,7 @@ p {
   max-width: 400px;
 }
 
+/* Créditos y Vidas Arcade */
 .arcade-status {
   position: absolute;
   top: 10px;
@@ -72,10 +74,15 @@ p {
 .credits, .lives {
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; /* Asegura que el texto largo no se desborde */
+  text-overflow: ellipsis;
 }
 
 /* Modo arcade */
+.arcade-mode {
+  background-color: #000; /* Fondo oscuro en modo arcade */
+  color: #00ff00; /* Texto en verde tipo arcade */
+}
+
 .arcade-mode .arcade-status {
   display: flex;
 }
@@ -86,6 +93,12 @@ p {
 
 .arcade-mode .arcade-toggle-btn {
   display: none; /* Ocultar el botón en modo arcade */
+}
+
+/* Estilo de la interfaz de arcade en modo arcade */
+.arcade-mode .arcade-status {
+  color: #ff00ff; /* Cambiar color a morado */
+  font-size: 1.5em; /* Aumentar tamaño de texto */
 }
 
 /* Ajuste para móvil y pantallas pequeñas */
@@ -118,3 +131,4 @@ p {
 .arcade-toggle-btn:hover {
   background-color: #ff9800;
 }
+
