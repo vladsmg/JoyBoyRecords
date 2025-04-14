@@ -10,6 +10,12 @@
 <body>
   <button id="toggleArcade">🎮 Modo Arcade</button>
 
+  <!-- Créditos y Vidas Arcade -->
+  <div class="arcade-status">
+    <span class="credits">CREDIT: 1</span>
+    <span class="lives">3UP</span>
+  </div>
+
   <header>
     <img src="images/logo.png" alt="Logo Joy Boy Records" class="logo">
     <div class="social-links">
@@ -34,20 +40,10 @@
     </div>
   </main>
 
-  <audio id="arcadeSound" src="https://freesound.org/data/previews/64/64774_634166-lq.mp3"></audio>
-
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const toggleBtn = document.getElementById('toggleArcade');
-      const arcadeSound = document.getElementById('arcadeSound');
-
-      toggleBtn.addEventListener('click', function () {
-        document.body.classList.toggle('arcade-mode');
-        arcadeSound.currentTime = 0;
-        arcadeSound.play();
-      });
+    document.getElementById('toggleArcade').addEventListener('click', () => {
+      document.body.classList.toggle('arcade-mode');
     });
   </script>
 </body>
 </html>
-
