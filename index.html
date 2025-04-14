@@ -2,14 +2,12 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joy Boy Records</title>
   <link rel="icon" type="image/x-icon" href="joyboy.ico">
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-  <button id="toggleArcade">🎮 Modo Arcade</button>
-
   <!-- Créditos y Vidas Arcade -->
   <div class="arcade-status">
     <span class="credits">CREDIT: 1</span>
@@ -30,6 +28,7 @@
     <p>Un sello independiente de música emo 🖤</p>
 
     <div class="player">
+      <!-- Bandcamp embed con el track específico -->
       <iframe style="border: 0; width: 100%; height: 120px;" 
         src="https://bandcamp.com/EmbeddedPlayer/track=1895702808/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" 
         seamless>
@@ -39,6 +38,8 @@
       </iframe>
     </div>
   </main>
+
+  <button id="toggleArcade" class="arcade-toggle-btn">Modo Arcade</button>
 
   <script>
     document.getElementById('toggleArcade').addEventListener('click', () => {
