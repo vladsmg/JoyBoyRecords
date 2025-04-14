@@ -1,4 +1,5 @@
 /* Estilos para Joy Boy Records */
+
 body {
   font-family: 'Arial', sans-serif;
   background-color: #fffbe6;
@@ -6,14 +7,16 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  overflow-x: hidden; /* Para evitar que se desborde el contenido en pantallas pequeñas */
+  overflow-x: hidden;
 }
 
+/* Layout */
 header, main {
   width: 100%;
-  max-width: 1200px; /* Limitar el ancho máximo */
-  margin: 0 auto; /* Centrar el contenido */
-  padding: 0 20px; /* Añadir un poco de margen para que no toque los bordes */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -56,30 +59,60 @@ p {
   max-width: 400px;
 }
 
-/* Estilo para el botón del modo arcade */
-#toggleArcade {
-  margin: 20px auto;
-  display: block;
-  padding: 10px 20px;
+/* Créditos y Vidas - Oculto por defecto */
+.arcade-status {
+  display: none;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  display: none;
+  justify-content: space-between;
+  padding: 0 20px;
   font-family: 'Press Start 2P', monospace;
-  font-size: 0.8em;
+  color: #0f0;
+  font-size: 1.2em;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.credits {
+  text-align: left;
+}
+
+.lives {
+  text-align: right;
+}
+
+/* Botón para cambiar de modo */
+.arcade-toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
   background-color: #111;
   color: #0f0;
   border: 2px solid #0f0;
+  padding: 10px 20px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.8em;
   cursor: pointer;
   transition: all 0.3s ease;
+  z-index: 20;
 }
 
-#toggleArcade:hover {
+.arcade-toggle-btn:hover {
   background-color: #0f0;
   color: #000;
 }
 
-/* Modo Arcade */
+/* Modo arcade */
 body.arcade-mode {
   background-color: #000;
   color: #0f0;
   font-family: 'Press Start 2P', monospace;
+}
+
+body.arcade-mode .arcade-status {
+  display: flex;
 }
 
 body.arcade-mode .logo {
@@ -93,40 +126,27 @@ body.arcade-mode a {
 }
 
 body.arcade-mode p {
+  color: #0f0;
   text-shadow: 1px 1px 2px #0f0;
 }
 
-/* Estilo para los créditos y vidas */
-.arcade-status {
-  position: absolute;
-  top: 10px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 20px;
-  font-family: 'Press Start 2P', monospace;
-  color: #0f0;
-  font-size: 1.2em;
+body.arcade-mode .arcade-toggle-btn {
+  display: none;
 }
 
-.credits {
-  text-align: left;
+body.arcade-mode .player iframe {
+  height: 100px;
 }
 
-.lives {
-  text-align: right;
-}
-
-/* Ajuste para móvil y pantallas pequeñas */
+/* Ajustes responsive */
 @media (max-width: 768px) {
   .arcade-status {
-    font-size: 1em; /* Reducir tamaño de texto en pantallas pequeñas */
-    padding: 0 5px;
+    font-size: 1em;
+    padding: 0 10px;
   }
 
   .player iframe {
-    height: 100px; /* Ajustar tamaño del reproductor en pantallas pequeñas */
+    height: 100px;
   }
 }
-
 
