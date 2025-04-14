@@ -1,3 +1,4 @@
+/* Estilos para Joy Boy Records */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #fffbe6;
@@ -8,7 +9,6 @@ body {
   overflow-x: hidden; /* Para evitar que se desborde el contenido en pantallas pequeñas */
 }
 
-/* Aquí estamos asegurando que, por defecto, se muestre el fondo claro en el modo normal */
 header, main {
   width: 100%;
   max-width: 1200px; /* Limitar el ancho máximo */
@@ -56,49 +56,65 @@ p {
   max-width: 400px;
 }
 
-/* Créditos y Vidas Arcade */
+/* Estilo para el botón del modo arcade */
+#toggleArcade {
+  margin: 20px auto;
+  display: block;
+  padding: 10px 20px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.8em;
+  background-color: #111;
+  color: #0f0;
+  border: 2px solid #0f0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#toggleArcade:hover {
+  background-color: #0f0;
+  color: #000;
+}
+
+/* Modo Arcade */
+body.arcade-mode {
+  background-color: #000;
+  color: #0f0;
+  font-family: 'Press Start 2P', monospace;
+}
+
+body.arcade-mode .logo {
+  filter: hue-rotate(180deg) brightness(1.2);
+  box-shadow: 0 0 10px #0f0;
+}
+
+body.arcade-mode a {
+  color: #0ff;
+  text-shadow: 1px 1px #0f0;
+}
+
+body.arcade-mode p {
+  text-shadow: 1px 1px 2px #0f0;
+}
+
+/* Estilo para los créditos y vidas */
 .arcade-status {
   position: absolute;
   top: 10px;
-  left: 10px;
-  right: 10px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0 10px;
+  padding: 0 20px;
   font-family: 'Press Start 2P', monospace;
-  color: red;
+  color: #0f0;
   font-size: 1.2em;
-  z-index: 10;
 }
 
-.credits, .lives {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.credits {
+  text-align: left;
 }
 
-/* Modo arcade */
-.arcade-mode {
-  background-color: #000; /* Fondo oscuro en modo arcade */
-  color: #00ff00; /* Texto en verde tipo arcade */
-}
-
-.arcade-mode .arcade-status {
-  display: flex;
-}
-
-.arcade-mode .player iframe {
-  height: 100px; /* Ajuste tamaño reproductor en modo arcade */
-}
-
-.arcade-mode .arcade-toggle-btn {
-  display: none; /* Ocultar el botón en modo arcade */
-}
-
-/* Estilo de la interfaz de arcade en modo arcade */
-.arcade-mode .arcade-status {
-  color: #ff00ff; /* Cambiar color a morado */
-  font-size: 1.5em; /* Aumentar tamaño de texto */
+.lives {
+  text-align: right;
 }
 
 /* Ajuste para móvil y pantallas pequeñas */
@@ -113,22 +129,4 @@ p {
   }
 }
 
-/* Botón "Modo Arcade" en la parte inferior izquierda */
-.arcade-toggle-btn {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  background-color: #f7c400;
-  color: #000;
-  border: none;
-  padding: 10px 20px;
-  font-family: 'Press Start 2P', monospace;
-  font-size: 1em;
-  cursor: pointer;
-  z-index: 20;
-}
-
-.arcade-toggle-btn:hover {
-  background-color: #ff9800;
-}
 
