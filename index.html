@@ -37,13 +37,15 @@
   <audio id="arcadeSound" src="https://freesound.org/data/previews/64/64774_634166-lq.mp3"></audio>
 
   <script>
-    const toggleBtn = document.getElementById('toggleArcade');
-    const arcadeSound = document.getElementById('arcadeSound');
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleBtn = document.getElementById('toggleArcade');
+      const arcadeSound = document.getElementById('arcadeSound');
 
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('arcade-mode');
-      arcadeSound.currentTime = 0;
-      arcadeSound.play();
+      toggleBtn.addEventListener('click', function () {
+        document.body.classList.toggle('arcade-mode');
+        arcadeSound.currentTime = 0;
+        arcadeSound.play();
+      });
     });
   </script>
 </body>
