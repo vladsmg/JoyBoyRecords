@@ -2,47 +2,48 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Joy Boy Records</title>
-  <link rel="icon" type="image/x-icon" href="joyboy.ico">
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Créditos y Vidas Arcade -->
+
+  <!-- Créditos y vidas solo en modo arcade -->
   <div class="arcade-status">
-    <span class="credits">CREDIT: 1</span>
-    <span class="lives">3UP</span>
+    <div class="credits">CREDIT 1</div>
+    <div class="lives">🛸 × 3</div>
   </div>
 
   <header>
-    <img src="images/logo.png" alt="Logo Joy Boy Records" class="logo">
-    <div class="social-links">
-      <a href="https://www.instagram.com/joyboyrecords/" target="_blank">Instagram</a>
-      <a href="https://joyboyrecords.bandcamp.com/" target="_blank">Bandcamp</a>
-      <a href="https://www.youtube.com/@joyboy4313" target="_blank">YouTube</a>
-    </div>
+    <img src="logo.png" alt="Logo Joy Boy Records" class="logo">
+    <h1>Joy Boy Records</h1>
   </header>
 
   <main>
-    <h1>Bienvenid@ a Joy Boy Records</h1>
-    <p>Un sello independiente de música emo 🖤</p>
+    <p>Sello independiente. Ediciones físicas limitadas. Música experimental, folk, emo y más.</p>
+
+    <div class="social-links">
+      <a href="https://instagram.com/joyboyrecords" target="_blank">Instagram</a>
+      <a href="https://joyboyrecords.bandcamp.com" target="_blank">Bandcamp</a>
+      <a href="https://youtube.com/@joyboyrecords" target="_blank">YouTube</a>
+    </div>
 
     <div class="player">
-      <!-- Bandcamp embed con el track específico -->
       <iframe style="border: 0; width: 100%; height: 120px;" 
-        src="https://bandcamp.com/EmbeddedPlayer/track=1895702808/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" 
-        seamless>
-        <a href="https://joyboyrecords.bandcamp.com/track/enfermedades-de-transmisi-n-sentimental">
-          Enfermedades de Transmisión Sentimental by Cuando el problema no existe
-        </a>
+              src="https://bandcamp.com/EmbeddedPlayer/album=0000000000/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" 
+              seamless>
+        <a href="https://joyboyrecords.bandcamp.com">Escucha en Bandcamp</a>
       </iframe>
     </div>
   </main>
 
-  <button id="toggleArcade" class="arcade-toggle-btn">Modo Arcade</button>
+  <!-- Botón para activar modo arcade -->
+  <button id="toggleArcade" class="arcade-toggle-btn">ACTIVAR MODO ARCADE</button>
 
   <script>
-    document.getElementById('toggleArcade').addEventListener('click', () => {
+    const toggleBtn = document.getElementById('toggleArcade');
+    toggleBtn.addEventListener('click', () => {
       document.body.classList.toggle('arcade-mode');
     });
   </script>
