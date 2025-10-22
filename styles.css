@@ -55,98 +55,62 @@ p {
 }
 
 .player {
-  margin: 30px auto;
+  margin: 30px auto 50px auto;
   max-width: 400px;
 }
 
-/* Créditos y Vidas - Oculto por defecto */
-.arcade-status {
-  display: none;
-  position: absolute;
-  top: 10px;
+/* ----------------------- */
+/* Carrusel de lanzamientos */
+/* ----------------------- */
+
+.carousel {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  margin: 40px auto 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.carousel-inner {
+  display: flex;           
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-inner img {
   width: 100%;
-  display: none;
-  justify-content: space-between;
-  padding: 0 20px;
-  font-family: 'Press Start 2P', monospace;
-  color: #0f0;
-  font-size: 1.2em;
-  box-sizing: border-box;
+  flex-shrink: 0;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;   /* imágenes cuadradas */
+  border-radius: 8px;
+}
+
+/* Botones del carrusel */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 24px;
   z-index: 10;
 }
 
-.credits {
-  text-align: left;
-}
-
-.lives {
-  text-align: right;
-}
-
-/* Botón para cambiar de modo */
-.arcade-toggle-btn {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  background-color: #111;
-  color: #0f0;
-  border: 2px solid #0f0;
-  padding: 10px 20px;
-  font-family: 'Press Start 2P', monospace;
-  font-size: 0.8em;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 20;
-}
-
-.arcade-toggle-btn:hover {
-  background-color: #0f0;
-  color: #000;
-}
-
-/* Modo arcade */
-body.arcade-mode {
-  background-color: #000;
-  color: #0f0;
-  font-family: 'Press Start 2P', monospace;
-}
-
-body.arcade-mode .arcade-status {
-  display: flex;
-}
-
-body.arcade-mode .logo {
-  filter: hue-rotate(180deg) brightness(1.2);
-  box-shadow: 0 0 10px #0f0;
-}
-
-body.arcade-mode a {
-  color: #0ff;
-  text-shadow: 1px 1px #0f0;
-}
-
-body.arcade-mode p {
-  color: #0f0;
-  text-shadow: 1px 1px 2px #0f0;
-}
-
-body.arcade-mode .arcade-toggle-btn {
-  display: none;
-}
-
-body.arcade-mode .player iframe {
-  height: 100px;
-}
+.prev { left: 10px; }
+.next { right: 10px; }
 
 /* Ajustes responsive */
 @media (max-width: 768px) {
-  .arcade-status {
-    font-size: 1em;
-    padding: 0 10px;
+  .carousel-inner img {
+    aspect-ratio: 1 / 1;
   }
 
   .player iframe {
     height: 100px;
   }
 }
-

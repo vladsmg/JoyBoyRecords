@@ -1,60 +1,60 @@
 <!DOCTYPE html>
- <html lang="es">
- <head>
-   <meta charset="UTF-8">
-   <title>Joy Boy Records</title>
-   <link rel="icon" type="image/x-icon" href="joyboy.ico">
-   <link rel="stylesheet" href="styles.css">
-   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
- </head>
- <body>
-   <!--<button id="toggleArcade">🎮 Modo Arcade</button> -->
- 
-   <!-- Créditos y Vidas Arcade -->
-   <div class="arcade-status">
-     <span class="credits">CREDIT: 1</span>
-     <span class="lives">3UP</span>
-   </div>
- 
-   <header>
-     <img src="images/logo.png" alt="Logo Joy Boy Records" class="logo">
-     <div class="social-links">
-       <a href="https://www.instagram.com/joyboyrecords/" target="_blank">Instagram</a>
-       <a href="https://joyboyrecords.bandcamp.com/" target="_blank">Bandcamp</a>
-       <a href="https://www.youtube.com/@joyboy4313" target="_blank">YouTube</a>
-     </div>
-   </header>
- 
-   <main>
-     <h1>Bienvenid@ a Joy Boy Records</h1>
-     <p>Un sello independiente de música emo 🖤</p>
- 
-     <div class="player">
-       <iframe style="border: 0; width: 100%; height: 120px;" 
-         src="https://bandcamp.com/EmbeddedPlayer/track=1895702808/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" 
-         seamless>
-         <a href="https://joyboyrecords.bandcamp.com/track/enfermedades-de-transmisi-n-sentimental">
-           Enfermedades de Transmisión Sentimental by Cuando el problema no existe
-         </a>
-       </iframe>
-     </div>
-   </main>
- 
-   <audio id="arcadeSound" src="https://freesound.org/data/previews/64/64774_634166-lq.mp3"></audio>
- 
-   <script>
-     document.addEventListener('DOMContentLoaded', function () {
-       const toggleBtn = document.getElementById('toggleArcade');
-       const arcadeSound = document.getElementById('arcadeSound');
- 
-       toggleBtn.addEventListener('click', function () {
-         document.body.classList.toggle('arcade-mode');
-         arcadeSound.currentTime = 0;
-         arcadeSound.play();
-       });
-     document.getElementById('toggleArcade').addEventListener('click', () => {
-       document.body.classList.toggle('arcade-mode');
-     });
-   </script>
- </body>
- </html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Joy Boy Records</title>
+  <link rel="icon" type="image/x-icon" href="joyboy.ico">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <img src="images/logo.png" alt="Logo Joy Boy Records" class="logo">
+    <div class="social-links">
+      <a href="https://www.instagram.com/joyboyrecords/" target="_blank">Instagram</a>
+      <a href="https://joyboyrecords.bandcamp.com/" target="_blank">Bandcamp</a>
+      <a href="https://www.youtube.com/@joyboy4313" target="_blank">YouTube</a>
+    </div>
+  </header>
+
+  <main>
+    <h1>Bienvenid@ a Joy Boy Records</h1>
+    <p>Un sello independiente de música emo 🖤</p>
+
+    <!-- Carrusel de lanzamientos -->
+    <div class="carousel">
+      <div class="carousel-inner">
+        <img src="images/l1.png" alt="Lanzamiento 1" class="active">
+        <img src="images/l2.png" alt="Lanzamiento 2">
+        <img src="images/l3.jpg" alt="Lanzamiento 3">
+        <img src="images/l4.jpg" alt="Lanzamiento 4">
+        <img src="images/l5.jpg" alt="Lanzamiento 5">
+        <img src="images/l6.jpg" alt="Lanzamiento 6">
+        <img src="images/l7.jpg" alt="Lanzamiento 7">
+        <img src="images/l8.jpg" alt="Lanzamiento 8">
+        <img src="images/l9.jpg" alt="Lanzamiento 9">
+        <img src="images/l10.jpg" alt="Lanzamiento 10">
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+
+    <!-- Reproductor Bandcamp -->
+    <div class="player">
+      <iframe style="border: 0; width: 100%; height: 120px;" 
+        src="https://bandcamp.com/EmbeddedPlayer/track=1895702808/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" 
+        seamless>
+        <a href="https://joyboyrecords.bandcamp.com/track/enfermedades-de-transmisi-n-sentimental">
+          Enfermedades de Transmisión Sentimental by Cuando el problema no existe
+        </a>
+      </iframe>
+    </div>
+  </main>
+
+  <!-- Script del carrusel -->
+  <script src="script.js"></script>
+
+</body>
+</html>
+
