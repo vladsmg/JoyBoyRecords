@@ -140,10 +140,9 @@ audio {
 }
 
 .track-list {
-  margin-top: 15px;
+  margin-top: 20px;
   padding: 0;
   list-style: none;
-  text-align: left;
   max-width: 420px;
   margin-left: auto;
   margin-right: auto;
@@ -152,16 +151,26 @@ audio {
 .track-list li {
   background: #111;
   color: #fff;
-  padding: 10px 14px;
-  margin-bottom: 6px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 0.95em;
+  font-size: 1rem;
   transition: background 0.3s, transform 0.15s;
+  text-align: center; /* 🔥 Hace que se vea bien en móvil */
 }
 
 .track-list li:hover {
   background: #f7c400;
   color: #111;
   transform: translateX(4px);
+}
+
+/* 🔥 Ajustes especiales para CELULAR */
+@media (max-width: 768px) {
+  .track-list li {
+    font-size: 1.1rem;
+    padding: 14px;
+    margin-bottom: 10px;
+  }
 }
