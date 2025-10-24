@@ -22,3 +22,9 @@ setInterval(() => {
   current = (current + 1) % images.length;
   showImage(current);
 }, 5000);
+
+function changeTrack(file) {
+  const player = document.getElementById('audioPlayer');
+  player.src = file;
+  player.play();
+}

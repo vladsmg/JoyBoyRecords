@@ -66,51 +66,94 @@ p {
 .carousel {
   position: relative;
   width: 90%;
-  max-width: 800px;
-  margin: 40px auto 20px auto;
+  max-width: 500px;
+  margin: 40px auto;
   overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: #fff;
 }
 
 .carousel-inner {
-  display: flex;           
-  transition: transform 0.5s ease-in-out;
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.carousel-inner a {
+  flex: 0 0 100%;
+  text-align: center;
 }
 
 .carousel-inner img {
   width: 100%;
-  flex-shrink: 0;
-  object-fit: cover;
-  aspect-ratio: 1 / 1;   /* imágenes cuadradas */
-  border-radius: 8px;
+  aspect-ratio: 1 / 1; /* 🔹 Hace las imágenes cuadradas */
+  object-fit: cover;   /* 🔹 Ajusta la imagen sin deformarla */
+  border-radius: 10px;
 }
 
-/* Botones del carrusel */
 .prev, .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
-  padding: 10px;
+  font-size: 2rem;
+  padding: 5px 10px;
   cursor: pointer;
   border-radius: 50%;
-  font-size: 24px;
-  z-index: 10;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .prev { left: 10px; }
 .next { right: 10px; }
 
-/* Ajustes responsive */
-@media (max-width: 768px) {
-  .carousel-inner img {
-    aspect-ratio: 1 / 1;
-  }
+/* Espaciado entre carrusel y reproductor */
+iframe, .player {
+  display: block;
+  margin: 30px auto;
+}
 
-  .player iframe {
-    height: 100px;
-  }
+/* Reproductor */
+
+.player {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+.player h2 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+audio {
+  width: 100%;
+  outline: none;
+}
+
+.track-list {
+  margin-top: 15px;
+}
+
+.track-list button {
+  margin: 5px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: #222;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.track-list button:hover {
+  background-color: #555;
 }

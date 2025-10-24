@@ -28,25 +28,25 @@
     <a href="https://open.spotify.com/intl-es/track/7IwxAkQ5ztoahh8RlY4T0i?si=912a32f4b74a43b8" target="_blank">
       <img src="images/l1.png" alt="Lanzamiento 1" class="active">
     </a>
-    <a href="https://joyboyrecords.bandcamp.com/" target="_blank">
+    <a href="https://open.spotify.com/intl-es/artist/5A8Z4y7XWLQpGmuc0Ymnde?si=R5rXDEkhSzKg2TSOJOocUQ" target="_blank">
       <img src="images/l2.png" alt="Lanzamiento 2">
     </a>
-    <a href="https://joyboyrecords.bandcamp.com/" target="_blank">
+    <a href="https://open.spotify.com/intl-es/album/0LLOgdvw5macv6eb9I0FIa?si=0E_izjdyRxqRkSodIsv98w" target="_blank">
       <img src="images/l3.jpg" alt="Lanzamiento 3">
     </a>
-    <a href="https://joyboyrecords.bandcamp.com/" target="_blank">
+    <a href="https://open.spotify.com/intl-es/album/1dH1xjRZrJRCSXNGWGjVZI?si=LcqGEbZARAeVqw_7CtXwNg" target="_blank">
       <img src="images/l4.jpg" alt="Lanzamiento 4">
     </a>
-    <a href="https://joyboyrecords.bandcamp.com/" target="_blank">
+    <a href="https://open.spotify.com/intl-es/album/1kvMW9BQK8DZ48uJCqXZIW?si=a0PcdI0ESE6i15X_1jeJXQ" target="_blank">
       <img src="images/l5.jpg" alt="Lanzamiento 5">
     </a>
-    <a href="https://joyboyrecords.bandcamp.com/" target="_blank">
+    <a href="https://open.spotify.com/intl-es/album/6XZlbM8kRyp0Yi4JtapR7n?si=E9qRPkURSl-0ZWgz2P0urw" target="_blank">
       <img src="images/l6.jpg" alt="Lanzamiento 6">
     </a>
-    <a href="https://joyboyrecords.bandcamp.com/" target="_blank">
+    <a href="https://open.spotify.com/intl-es/album/46GRt3PsFnAFCbU41nNCkK?si=qTsrB6cVT4K8rcgxS7zXEQ" target="_blank">
       <img src="images/l7.jpg" alt="Lanzamiento 7">
     </a>
-    <a href="https://joyboyrecords.bandcamp.com/" target="_blank">
+    <a href="https://open.spotify.com/intl-es/artist/1lU2rnB0Caom6ONtyplDwj?si=VobmPGCXRE-k7vGkPGP5Tw" target="_blank">
       <img src="images/l8.jpg" alt="Lanzamiento 8">
     </a>
     <a href="https://joyboyrecords.bandcamp.com/" target="_blank">
@@ -60,16 +60,26 @@
   <button class="next">&#10095;</button>
 </div>
 
-    <!-- Reproductor Bandcamp -->
-    <div class="player">
-      <iframe style="border: 0; width: 100%; height: 120px;" 
-        src="https://bandcamp.com/EmbeddedPlayer/track=1895702808/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" 
-        seamless>
-        <a href="https://joyboyrecords.bandcamp.com/track/enfermedades-de-transmisi-n-sentimental">
-          Enfermedades de Transmisión Sentimental by Cuando el problema no existe
-        </a>
-      </iframe>
-    </div>
+    <!-- Reproductor web local -->
+<div class="player">
+  <h2>Reproductor Joy Boy 🎧</h2>
+  <audio id="audioPlayer" controls>
+    <source src="audio/tema1.mp3" type="audio/mpeg">
+    Tu navegador no soporta el reproductor de audio.
+  </audio>
+
+  <div class="track-list">
+    <button onclick="changeTrack('audio/1-Roma.mp3')">Violentistas de Siempre - Roma</button>
+    <button onclick="changeTrack('audio/3.-Puente-Amarillo.mp3')">TMAET - Puente Amarillo</button>
+    <button onclick="changeTrack('audio/05-GREGORY-eq1_24_44_HolzMstr.mp3')">Perro Gato - Gregory</button>
+    <button onclick="changeTrack('audio/6.-Monitos-de-la-Tele.mp3')">Pieza Oscura - Monitos de la Tele</button>
+    <button onclick="changeTrack('audio/Día-nublado-de-verano-Las-margaritas.mp3')">Las Margaritas - Dia nublado de Verano</button>
+    <button onclick="changeTrack('audio/MASTER_-02-Dejavu-v4-_4824_.mp3')">Supertriste - Dejavu</button>
+    <button onclick="changeTrack('audio/NMSC-MASTER.mp3')">Los Krapulitos - NMSC</button>
+    <button onclick="changeTrack('audio/Polola-44100-16.mp3')">Suaave - Polola</button>
+  </div>
+</div>
+
   </main>
 
   <!-- Script del carrusel -->
